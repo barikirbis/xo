@@ -32,7 +32,15 @@ def draw_cell(x, y, w, h, ctx: Context2d):
     ctx.fillRect(x, y, w, h)
     print("draw_cell")
 
+def draw_field(cell_w, cell_margin, ctx: Context2d):
+    for i in range(3):
+        for j in range(3):
+            x = cell_margin * (i+1) + cell_w * i
+            y = cell_margin * (j+1) + cell_w * j
+            draw_cell(x, y, cell_w, cell_w, ctx)
+
 def main():
     ctx = cfg_canvas(field_w, field_w, document.getElementById("canva"))
-    draw_cell(cell_margin, cell_margin, cell_w, cell_w, ctx)
+    #draw_cell(cell_margin, cell_margin, cell_w, cell_w, ctx)
+    draw_field(cell_w, cell_margin, ctx)
     
