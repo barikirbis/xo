@@ -16,6 +16,7 @@ def cfg_canvas(width: int, height: int, canvas: Element) -> Context2d:
 
     ctx.clearRect(0, 0, width, height)
 
+    print("cfg_canvas")
     return ctx
 
 def draw_cell(x, y, w, h, ctx: Context2d):
@@ -23,8 +24,9 @@ def draw_cell(x, y, w, h, ctx: Context2d):
     рисуем одну клетку поля
     """
     ctx.fillRect(x, y, w, h)
+    print("draw_cell")
 
 def main():
     cfg_canvas(field_w, field_w, document.getElementById("canva"))
     draw_cell(cell_margin, cell_margin, cell_w, cell_w, ctx)
-    print("hello xo")
+    
