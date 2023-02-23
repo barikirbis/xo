@@ -4,8 +4,12 @@
     <script defer src="https://pyscript.net/latest/pyscript.js"></script>
   </head>
   <body>
+    <py-config type="toml" src="./xo.toml"></py-config>
+
     <py-script>
-        print('Hello, World!')
+      import xo
+
+      print(xo.hello)
     </py-script>
   </body>
 </html>
