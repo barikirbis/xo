@@ -1,3 +1,4 @@
+from pyodide.ffi import to_js, create_proxy
 from js import (
     document,
 #    CanvasRenderingContext2D as Context2d,
