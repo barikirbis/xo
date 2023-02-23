@@ -1,2 +1,2 @@
-def hello():
-    print('Hello from pyscript')
+def main():
+    print "hello xo"
