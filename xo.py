@@ -22,7 +22,6 @@ def cfg_canvas(width: int, height: int, canvas) -> Context2d:
 
     ctx.clearRect(0, 0, width, height)
 
-    print("cfg_canvas")
     return ctx
 
 def draw_cell(x, y, w, h, ctx: Context2d):
@@ -30,9 +29,11 @@ def draw_cell(x, y, w, h, ctx: Context2d):
     рисуем одну клетку поля
     """
     ctx.fillRect(x, y, w, h)
-    print("draw_cell")
 
 def draw_field(cell_w, cell_margin, ctx: Context2d):
+    """
+    рисуем игровое поле 3х3
+    """
     for i in range(3):
         for j in range(3):
             x = cell_margin * (i+1) + cell_w * i
@@ -43,4 +44,3 @@ def main():
     ctx = cfg_canvas(field_w, field_w, document.getElementById("canva"))
     #draw_cell(cell_margin, cell_margin, cell_w, cell_w, ctx)
     draw_field(cell_w, cell_margin, ctx)
-    
