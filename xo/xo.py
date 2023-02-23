@@ -1,3 +1,8 @@
+from js import (
+    document,
+#    CanvasRenderingContext2D as Context2d,
+)
+
 cell_w = 100
 cell_margin = 10
 field_w = cell_w * 3 + cell_margin * 4 
