@@ -8,7 +8,7 @@ cell_w = 100
 cell_margin = 10
 field_w = cell_w * 3 + cell_margin * 4 
 
-def cfg_canvas(width: int, height: int, canvas: Element) -> Context2d:
+def cfg_canvas(width: int, height: int, canvas) -> Context2d:
     """
     настройка канваса
     """
